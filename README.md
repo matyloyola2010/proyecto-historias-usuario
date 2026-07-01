@@ -1,6 +1,6 @@
 # Sistema de Gestión de Stock, Compras y Ventas (Modo Consola)
 
-**Fecha:** 30/06/2026  
+**Fecha:** 27-05-2026  
 **Materia:** [Poné acá el nombre de tu materia]  
 
 ## 👥 Integrante
