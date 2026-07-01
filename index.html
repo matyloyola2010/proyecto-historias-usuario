@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matías Loyola | Portfolio Profesional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fbf9f6;
+            color: #2d3748;
+            line-height: 1.7;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #eddcd2;
+            box-shadow: 0 4px 20px rgba(192, 86, 33, 0.03);
+        }
+
+        header h1 {
+            font-size: 2.6rem;
+            color: #1a202c;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 1.15rem;
+            color: #718096;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        section {
+            background: #ffffff;
+            padding: 40px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            border: 1px solid #eddcd2;
+            box-shadow: 0 4px 20px rgba(192, 86, 33, 0.02);
+        }
+
+        h2 {
+            color: #c05621;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::after {
+            content: '';
+            flex-grow: 1;
+            height: 2px;
+            background: #f0e6df;
+        }
+
+        /* --- NUEVO FORMATO PARA TECNOLOGÍAS --- */
+        .tech-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .tech-row {
+            display: flex;
+            align-items: flex-start;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0e6df;
+        }
+
+        .tech-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .tech-label {
+            font-weight: 700;
+            color: #1a202c;
+            min-width: 180px;
+            font-size: 1.05rem;
+            padding-right: 15px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: #fffaf7;
+            color: #c05621;
+            border: 1px solid #f7e6dc;
+            padding: 4px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.2s ease;
+        }
+
+        .tech-tag:hover {
+            background: #c05621;
+            color: white;
+            border-color: #c05621;
+        }
+        /* -------------------------------------- */
+
+        .project-card {
+            padding: 20px 0;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .project-card:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .project-card h3 {
+            color: #1a202c;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .project-card p {
+            color: #4a5568;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #f7fafc;
+            color: #4a5568;
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 6px;
+            margin-right: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: #c05621;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #9c4216;
+            transform: translateY(-1px);
+        }
+
+        .btn-alt {
+            background-color: transparent;
+            color: #4a5568;
+            border: 1px solid #cbd5e0;
+        }
+
+        .btn-alt:hover {
+            background-color: #f7fafc;
+            color: #1a202c;
+            border-color: #a0aec0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #a0aec0;
+            font-size: 0.85rem;
+        }
+
+        /* Ajuste responsivo para pantallas chicas */
+        @media (max-width: 600px) {
+            .tech-row {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .tech-label {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Encabezado -->
+        <header>
+            <h1>Matías Loyola</h1>
+            <p>Estudiante de Desarrollo Web Full-Stack | Soporte Técnico y Administración de Sistemas</p>
+        </header>
+        
+        <!-- Presentación -->
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <p>Soy un apasionado de la tecnología en plena formación como Desarrollador Web Full-Stack. Me entusiasma tanto la creación de interfaces de usuario funcionales y adaptables (Front-End) como el diseño de la lógica y estructuras que gestionan los datos por detrás (Back-End).</p>
+            <p style="margin-top: 12px; color: #4a5568;">Mi perfil combina los fundamentos del desarrollo de software con un fuerte interés y experiencia práctica en el soporte técnico integral, configuración de hardware y optimización de sistemas operativos, permitiéndome entender la tecnología desde la infraestructura hasta el código.</p>
+        </section>
+
+        <!-- Tecnologías (NUEVO FORMATO DE FILAS) -->
+        <section id="tecnologias">
+            <h2>Tecnologías e Intereses</h2>
+            <div class="tech-stack">
+                
+                <div class="tech-row">
+                    <div class="tech-label">Desarrollo Web</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Arquitecturas Web</span>
+                    </div>
+                </div>
+
+                <div class="tech-row">
+                    <div class="tech-label">Lógica y Algoritmia</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Estructuras de Control</span>
+                        <span class="tech-tag">Diagramas de Flujo</span>
+                        <span class="tech-tag">Pseudocódigo (PSeInt)</span>
+                    </div>
+                </div>
+
+                <div class="tech-row">
+                    <div class="tech-label">Soporte y Sistemas</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Mantenimiento de Hardware</span>
+                        <span class="tech-tag">Optimización de Sistemas</span>
+                        <span class="tech-tag">Windows</span>
+                        <span class="tech-tag">Linux</span>
+                    </div>
+                </div>
+
+                <div class="tech-row">
+                    <div class="tech-label">Herramientas IT</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">GitHub</span>
+                        <span class="tech-tag">Control de Versiones</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos">
+            <h2>Proyectos Destacados</h2>
+            
+            <div class="project-card">
+                <h3>Diseño de Algoritmos de Control</h3>
+                <p>Desarrollo de soluciones lógicas y automatización de procesos mediante pseudocódigo. Implementación práctica de condicionales múltiples (Según), bucles dinámicos (Mientras, Para) y variables lógicas para el control de flujos de sistemas secuenciales.</p>
+                <span class="badge">PSeInt</span>
+                <span class="badge">Lógica Algorítmica</span>
+            </div>
+
+            <div class="project-card">
+                <h3>Maquetación Web Inicial</h3>
+                <p>Creación de estructuras de sitios web utilizando código limpio y semántico, aplicando estilos visuales adaptables a diferentes pantallas de dispositivos.</p>
+                <span class="badge">HTML5</span>
+                <span class="badge">CSS3</span>
+                <span class="badge">Responsive Design</span>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p style="margin-bottom: 15px;">¿Querés conocer más sobre mi trabajo o ponerte en contacto conmigo? Podés revisar mis redes profesionales:</p>
+            
+            <div class="btn-container">
+                <a href="https://www.linkedin.com/in/matias-loyola-4a1407419/" target="_blank" class="btn">Ver mi LinkedIn</a>
+                <a href="https://github.com/matyloyola2010" target="_blank" class="btn btn-alt">Ver mi GitHub</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Matías Loyola. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
